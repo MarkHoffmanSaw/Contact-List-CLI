@@ -110,6 +110,7 @@ export default {
   },
   methods: {
     addInfo() {
+      this.editExtraInfoID = false;
       if (this.inputExtraName && this.inputExtraInfo !== "") {
         this.extraInfo.push(`${this.inputExtraName}:${this.inputExtraInfo}`);
         this.editExtraInfoArr = true;
@@ -136,6 +137,7 @@ export default {
       this.currentEdit = this.extraInfo[i];
     },
     saveInfo() {
+      this.editExtraInfoArr = false;
       this.indexArr = this.extraInfo.indexOf(this.currentEdit);
       this.extraInfo.splice(
         this.indexArr,
