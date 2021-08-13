@@ -98,7 +98,7 @@ export default {
       this.isAlertDelete = !this.isAlertDelete;
     },
     moveToInfo(id) {
-      this.title = "Contact information";
+      this.title = "Contact information: " + this.contacts[id].fullName;
       this.isActivePage = !this.isActivePage;
       this.$emit("move-info", id);
     },
